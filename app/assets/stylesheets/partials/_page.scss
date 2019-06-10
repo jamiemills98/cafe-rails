@@ -1,0 +1,10 @@
+h1 {
+    @include font-settings();
+    @include flex-center;
+    width: 100%;
+}
+
+table {
+    @include font-settings();
+    @include flex-center;
+}

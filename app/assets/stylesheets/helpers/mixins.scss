@@ -1,0 +1,10 @@
+@mixin font-settings($color: $primary-font-color, $family: $primary-font-family) {
+    color: $color;
+    font-family: $family;
+}
+@mixin flex-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
