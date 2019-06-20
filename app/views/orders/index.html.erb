@@ -1,0 +1,23 @@
+<h1>Your Order</h1>
+<table>
+<tr>
+<th>Quantity</th>
+<th>Item</th>
+</tr>
+<%if @order%>
+ <% @order.each do |order_item| %>
+   <tr>
+     <td><%= order_item.quantity %></td>
+     <td><%= order_item.name %></td>
+     <td><%= link_to 'Edit', edit_order_item_path(order_item) %></td>
+     <td><%= link_to 'Delete', order_item,  method: :delete, data: { confirm: 'Are you sure?' 
+     } %></td>
+     
+   </tr>
+   <%end%>
+   <tr>
+     <th>Total</th>
+     <th><%= "$%.2f" % @order_total %></th>
+   </tr>
+ <%end%>
+ </table>

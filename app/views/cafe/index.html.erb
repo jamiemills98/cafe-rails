@@ -10,6 +10,8 @@
     <tr>
         <td><%= menu_item.name%></td>
         <td><%= "$%.2f" % menu_item.price%></td>
+        <td><%= link_to 'Order', new_order_item_path(:item_name => menu_item.name)
+        %></td>
     </tr>
     <% end %>
 </table>

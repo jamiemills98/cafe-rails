@@ -1,0 +1,15 @@
+<%=form_with model:@order_item, class: "form-class" do |form| %>
+    <table>
+      <tr>
+        <td><%= "How many #{@order_item.name}s would you like?"%></td>
+        <td><%= form.hidden_field :name%></td>
+      </tr>
+      <tr>
+        <td><%= label(:quantity,"Qty")%>
+        <%= form.number_field :quantity, min:1, value: @order_item.quantity%></td>
+      </tr>
+      <tr>
+        <td><%= form.submit "Edit order", class: "button-class"%></td>
+      </tr>
+    </table>
+   <%end%>
